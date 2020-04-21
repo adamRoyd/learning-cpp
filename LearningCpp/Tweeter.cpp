@@ -1,17 +1,19 @@
+#pragma once
 #include "Tweeter.h"
 #include <iostream>
-using std::string;
-using std::cout;
 
-Tweeter::Tweeter(string first, string last, int arbitrary, string handle)
+Tweeter::Tweeter(std::string first,
+	std::string last,
+	int arbitrary,
+	std::string handle)
 	:
 	Person(first, last, arbitrary),
 	twitterhandle(handle)
 {
-	cout << "constructing tweeter " << twitterhandle << std::endl;
+	std::cout << "constructing tweeter " << twitterhandle << std::endl;
 }
 
-Tweeter::~Tweeter()
+Tweeter::~Tweeter() 
 {
-	cout << "destructing tweeter " << twitterhandle << std::endl;
+	std::cout << "destructing tweeter " << twitterhandle << std::endl;
 }

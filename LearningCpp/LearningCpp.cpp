@@ -1,15 +1,23 @@
-// LearningCpp.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#pragma once
+#include "Tweeter.h"
+#include "status.h"
 #include <iostream>
 #include <string>
-#include "Person.h"
-#include "Tweeter.h"
+
 int main()
 {
-    //Person p1("Adam", "Boothroyd", 2);
-    //Tweeter t("Someone", "Else", 3, "@yea");
-    std::cout << "Hello World!\n";
+    Person p1("Adam", "Boothroyd", 2);
+    {
+        Tweeter t("Someone", "Else", 3, "@yea");
+        std::string name2 = t.getName();
+        std::cout << "Name retrieved " << name2 << std::endl;
+    }        
+
+    FileError fe = FileError::notfound;
+    fe = FileError::ok;
+    NetworkError ne = NetworkError::disconnected;
+    ne = NetworkError::ok;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
