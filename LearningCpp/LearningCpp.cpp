@@ -1,11 +1,33 @@
 #pragma once
-#include "Tweeter.h"
-#include "status.h"
 #include <iostream>
 #include <string>
 
+#include "Tweeter.h"
+#include "status.h"
+#include "Utility.h";
+
+
 int main()
 {
+    int x;
+    std::cout << "Enter a number" << std::endl;
+    std::cin >> x;
+
+    if (IsPrime(x)) {
+        std::cout << x << " is prime" << std::endl;
+    }
+    else {
+        std::cout << x << " is not prime" << std::endl;
+    }
+
+    if (Is2MorePrime(x)) {
+        std::cout << x << " is prime" << std::endl;
+    }
+    else {
+        std::cout << x << " is not prime" << std::endl;
+    }
+    
+
     Person p1("Adam", "Boothroyd", 2);
     {
         Tweeter t("Someone", "Else", 3, "@yea");
